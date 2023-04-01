@@ -1,4 +1,3 @@
-from pandas import DataFrame
 import pandas as pd
 import requests
 from zipfile import ZipFile
@@ -6,12 +5,10 @@ from io import BytesIO
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 import geopandas as gpd
-import matplotlib.pyplot as plt
 from shapely.geometry import Point, Polygon
 from fiona.drvsupport import supported_drivers
-
-from shapely.geometry import polygon
 from xml.dom.minidom import *
+import json
 
 #create a session
 s = requests.session()
