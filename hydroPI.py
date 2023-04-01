@@ -16,6 +16,24 @@ s = requests.session()
 #set some configuration options
 gpd.options.display_precision = 9
 
+def get_aip():
+    url = "http://pannes.hydroquebec.com/pannes/donnees/v3_0/aipversion.json"
+    resp = s.get(url=url)
+    AIP_VERSION = resp.json()
+    return AIP_VERSION
+
+def get_aip_markers(AIP_VERSION):
+    url = f"http://pannes.hydroquebec.com/pannes/donnees/v3_0/aipmarkers{AIP_VERSION}.json"
+    markers = s.get(url=url).json()
+    return markers
+
+#gets all the outages polygones from the kml file 
+def get_aip_polys_geo_kml(AIP_VERSION):
+    url = f"http://pannes.hydroquebec.com/pannes/donnees/v3_0/aippoly{AIP_VERSION}.kmz"
+    kmz = s.get(url=url, stream=True)
+    geo_df = process_kmz_to_geo_df(kmz)
+    return geo_df
+
 #gets the bis number
 def get_bis():
     url = "http://pannes.hydroquebec.com/pannes/donnees/v3_0/bisversion.json"
@@ -23,18 +41,22 @@ def get_bis():
     BIS_VERSION = resp.json()
     return BIS_VERSION
 
-
 def get_markers(BIS_VERSION):
     url = f"http://pannes.hydroquebec.com/pannes/donnees/v3_0/bismarkers{BIS_VERSION}.json"
     markers = s.get(url=url).json()
     return markers
 
 #gets all the outages polygones from the kml file 
-def get_polys_kml(BIS_VERSION, save_path = "./"):
+def get_polys_geo_df(BIS_VERSION):
     url = f"http://pannes.hydroquebec.com/pannes/donnees/v3_0/bispoly{BIS_VERSION}.kmz"
     kmz = s.get(url=url, stream=True)
 
-    #unzip the kmz file into a kml file
+    geo_df = process_kmz_to_geo_df(kmz)
+
+    return geo_df
+
+def process_kmz_to_geo_df(kmz):
+        #unzip the kmz file into a kml file
     kmz = ZipFile(BytesIO(kmz.content))
     kml = kmz.open(kmz.namelist()[0])
 
@@ -96,11 +118,14 @@ def resolve_outage_cause(code):
     else:
         cause = "Unknown"
 
+    #avoid using a switch to keep compatibility with older python versions 
     if code in [11, 12, 13, 14, 58, 70, 72, 73, 74, 79]: cause = "Equipment failure"
     if code in [21, 22, 24, 25, 26]: cause = "Weather conditions"
     if code in [31, 32, 33, 34, 41, 42, 43, 44, 54, 55, 56, 57]: cause = "Accident or incident"
     if code in [52, 53]: cause = "Damage caused by an animal"
     if code == 51: cause = "Damage due to vegetation"
+
+
     return cause
 
 #recieves a numeric code and returns the current status of the outage in string form 
@@ -122,6 +147,23 @@ def resolve_status_code(code):
 #creates a df of all the outages and the causes
 def create_markers_df(markers):
     markers_df = pd.DataFrame(markers['pannes'], columns=['num_affected', 'start','end','policy','p_centroid_coord','status_code','unkwn','cause_code','municipality_code','outage_msg'])
+
+    #centroid coordinates come in as a string. Converting to list of x,y coordinates
+    markers_df['p_centroid_coord'] = markers_df['p_centroid_coord'].map(lambda x: [ float(n) for n in x.strip('][').split(',')])
+
+    #create a centroid point using the x,y coordinates
+    markers_df['centroid'] = markers_df['p_centroid_coord'].apply(lambda x: Point(x))
+
+    #resolve the status codes
+    markers_df['status'] = markers_df['status_code'].apply(lambda x: resolve_status_code(x))
+
+    #resolve the cause codes
+    markers_df['cause'] = markers_df['cause_code'].apply(lambda x: resolve_outage_cause(x))
+    return markers_df
+
+#creates a df of all the planned outages and the causes
+def create_aip_markers_df(markers):
+    markers_df = pd.DataFrame(markers['pannes'], columns=['num_affected', 'notice_number', 'scheduled_start','scheduled_end','actual_start','actual_end','postponed_start','postponed_end','delayed_start','delayed_end','unkwn4','unkwn3','unkwn2','unkwn','cause_code','municipality_code', 'status_code','p_centroid_coord'])
 
     #centroid coordinates come in as a string. Converting to list of x,y coordinates
     markers_df['p_centroid_coord'] = markers_df['p_centroid_coord'].map(lambda x: [ float(n) for n in x.strip('][').split(',')])
@@ -225,10 +267,31 @@ def get_polys_df(bis=None):
         bis = get_bis()
 
     #get the df of all the outages
-    polys = get_polys_kml(bis)
+    polys = get_polys_geo_df(bis)
 
     #get the list of markers (unlike the kml file, markers give reasons for outages)
     markers = get_markers(bis)
+
+    #convert markers to df
+    markers_df = create_markers_df(markers=markers)
+
+    #merge to one main
+    main_df = polys.merge(markers_df, on='centroid', how='left')
+    return main_df
+
+#returns a df with all the planned outages polygones (as well as the cause for aoutages)
+def get_aip_polys_df(aip=None):
+    #get info from hydro
+
+    #if bis was not provided get one
+    if not aip:
+        aip = get_aip()
+
+    #get the df of all the outages
+    polys = get_aip_polys_geo_kml(aip)
+
+    #get the list of markers (unlike the kml file, markers give reasons for outages)
+    markers = get_aip_markers(aip)
 
     #convert markers to df
     markers_df = create_markers_df(markers=markers)
@@ -302,9 +365,13 @@ p_str = '''
 
 
 
-print(get_ouatges('{"alais":"point 6","address":"","Longitude": -73.67335690719707,"Latitude": 45.510886201436016}'))
-
-
+#print(get_ouatges('{"alais":"point 6","address":"","Longitude": -73.67335690719707,"Latitude": 45.510886201436016}'))
+aip = get_aip()
+bis = get_bis()
+get_aip_polys_df()
+#print(get_planned_interuptions_polys_kml(aip))
+#print( get_planned_interuption_markers(aip))
+#print(get_ouatges(p_str))
 
 
 
