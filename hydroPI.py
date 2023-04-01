@@ -163,7 +163,7 @@ def create_markers_df(markers):
 
 #creates a df of all the planned outages and the causes
 def create_aip_markers_df(markers):
-    markers_df = pd.DataFrame(markers['pannes'], columns=['num_affected', 'notice_number', 'scheduled_start','scheduled_end','actual_start','actual_end','postponed_start','postponed_end','delayed_start','delayed_end','unkwn4','unkwn3','unkwn2','unkwn','cause_code','municipality_code', 'status_code','p_centroid_coord'])
+    markers_df = pd.DataFrame(markers, columns=['num_affected', 'notice_number', 'scheduled_start','scheduled_end','actual_start','actual_end','postponed_start','postponed_end','delayed_start','delayed_end','unkwn2','unkwn','cause_code','municipality_code', 'status_code','p_centroid_coord'])
 
     #centroid coordinates come in as a string. Converting to list of x,y coordinates
     markers_df['p_centroid_coord'] = markers_df['p_centroid_coord'].map(lambda x: [ float(n) for n in x.strip('][').split(',')])
@@ -283,7 +283,7 @@ def get_polys_df(bis=None):
 def get_aip_polys_df(aip=None):
     #get info from hydro
 
-    #if bis was not provided get one
+    #if aip was not provided get one
     if not aip:
         aip = get_aip()
 
@@ -294,7 +294,7 @@ def get_aip_polys_df(aip=None):
     markers = get_aip_markers(aip)
 
     #convert markers to df
-    markers_df = create_markers_df(markers=markers)
+    markers_df = create_aip_markers_df(markers=markers)
 
     #merge to one main
     main_df = polys.merge(markers_df, on='centroid', how='left')
@@ -303,6 +303,14 @@ def get_aip_polys_df(aip=None):
 #a function for formatting the returned affected points 
 def process_view(affected_pts_df):
 
+    if 'postponed_start' in affected_pts_df.columns:
+        return process_aip_view(affected_pts_df)
+    else:
+        return process_bis_view(affected_pts_df)
+
+
+
+def process_bis_view(affected_pts_df):
     #filter out columns and leave only the ones we care about.
     df = affected_pts_df[['alais','address','start','end','num_affected','status','cause','municipality_code']]
 
@@ -311,6 +319,14 @@ def process_view(affected_pts_df):
 
     return affected_points_json
 
+def process_aip_view(affected_pts_df):
+    #filter out columns and leave only the ones we care about.
+    df = affected_pts_df[['alais','address','scheduled_start','scheduled_end','actual_start','actual_end','postponed_start','postponed_end','num_affected','status','cause','municipality_code']]
+    
+    #convert to json 
+    affected_points_json = df.to_json(orient = "records",force_ascii=False)
+
+    return affected_points_json
     
 def get_ouatges(points_str):
     #get the points dataframe
@@ -326,7 +342,20 @@ def get_ouatges(points_str):
     affected_points_json = process_view(affected_points_df)
     return affected_points_json
 
+    
+def get_planned_interuptions(points_str):
+    #get the points dataframe
+    points_df = points_df_from_json(points_str)
 
+    #merge to one main
+    planned_outage_df =  get_aip_polys_df() 
+    
+    #get a df of affected points
+    affected_points_df = get_affected_points(planned_outage_df, points_df)
+
+    #print(affected_points_df)
+    affected_points_json = process_view(affected_points_df)
+    return affected_points_json
 p_str = '''
 [
 {
@@ -368,7 +397,7 @@ p_str = '''
 #print(get_ouatges('{"alais":"point 6","address":"","Longitude": -73.67335690719707,"Latitude": 45.510886201436016}'))
 aip = get_aip()
 bis = get_bis()
-get_aip_polys_df()
+get_planned_interuptions(p_str)
 #print(get_planned_interuptions_polys_kml(aip))
 #print( get_planned_interuption_markers(aip))
 #print(get_ouatges(p_str))
