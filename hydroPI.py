@@ -33,46 +33,60 @@ def get_markers(BIS_VERSION):
 def get_polys_kml(BIS_VERSION, save_path = "./"):
     url = f"http://pannes.hydroquebec.com/pannes/donnees/v3_0/bispoly{BIS_VERSION}.kmz"
     kmz = s.get(url=url, stream=True)
-    kmz = ZipFile(BytesIO(kmz.content))
 
+    #unzip the kmz file into a kml file
+    kmz = ZipFile(BytesIO(kmz.content))
     kml = kmz.open(kmz.namelist()[0])
 
-
-    #kmz.extractall()
-
+    #add kml to the supported drivers
     supported_drivers['KML'] = 'rw'
     supported_drivers['LIBKML'] = 'rw'
 
+    #parse the kml file using an xml parser
     dom = parse(kml)
-    placemarks = dom.getElementsByTagName("Placemark")
-
-    coords = placemarks[0].getElementsByTagName("coordinates")[0].firstChild.data
-    coords_int = [ [ float(i) for i in x.split(",")] for x in coords.split(" ")] 
     
-    centroid_tag = [i  for i in placemarks[0].getElementsByTagName("Data") if i.hasAttribute('name') and i.getAttribute('name') == 'centroid'][0]
-    centroid_raw = centroid_tag.getElementsByTagName("value")[0].firstChild.data
-    centroid_coord = [ float(n) for n in centroid_raw.strip('][').split(',')]
+    #get all the polygons that form the outage map 
+    placemarks = dom.getElementsByTagName("Placemark")
 
     entries = []
     for i in placemarks:
+
+        #get the polygon coordinates
         coords = i.getElementsByTagName("coordinates")[0].firstChild.data
+
+        #convert the string of polygon coordinates into a list of floats
         coords_int = [ [ float(n) for n in x.split(",")] for x in coords.split(" ")] 
 
+        #locate the centroid tag in the xml document
         centroid_tag = [n  for n in i.getElementsByTagName("Data") if n.hasAttribute('name') and n.getAttribute('name') == 'centroid'][0]
+        
+        #get the centroid coordinates (returns string)
         centroid_raw = centroid_tag.getElementsByTagName("value")[0].firstChild.data
+
+        #convert to list of floats 
         centroid_coord = [ float(n) for n in centroid_raw.strip('][').split(',')]
-        #centroid_coord = centroid_tag.getElementsByTagName("value")[0].firstChild.data
+
+        #create a centroid point
         centroid = Point(centroid_coord)
 
+        #create polygon 
         poly = Polygon(coords_int)
+
+        #append a tupple of all the collected information into a list
         entries.append((centroid, centroid_coord, poly ,coords_int)) # List of tuples
 
+    #create a datafram using the collected info 
     df = pd.DataFrame(entries, columns=('centroid','centroid_coord','polygon', 'poly_coords'))
-    #geod = gpd.GeoDataFrame(df, geometry=df.polygon, crs="EPSG:4326")
+ 
+    #convert the datafrom into a geodataframe so we can run geometric/mathematical opperations on the points and polygons 
     geod = gpd.GeoDataFrame(df, geometry=df.polygon, crs="EPSG:4326")
+
+    #specify the "geomitry" column in the geodataframe 
     geod = geod.set_geometry("polygon").drop('geometry', axis=1)
 
     return geod
+
+#recieves a numeric code and returns the cause in string form 
 def resolve_outage_cause(code):
 
     #if code is not empty, set cause = code as default, and cast code to int. If code is empty str, set cause to Unkown
@@ -89,6 +103,7 @@ def resolve_outage_cause(code):
     if code == 51: cause = "Damage due to vegetation"
     return cause
 
+#recieves a numeric code and returns the current status of the outage in string form 
 def resolve_status_code(code):
 
     #convert to upper case str to be safe
@@ -120,13 +135,7 @@ def create_markers_df(markers):
     #resolve the cause codes
     markers_df['cause'] = markers_df['cause_code'].apply(lambda x: resolve_outage_cause(x))
     return markers_df
-'''
-def get_affected_points(polys, markers, points):
-    mask = polys["polygon"].apply(lambda x: any(x.contains(i) for i in points))
-    indexes = polys["polygon"][mask].index.values.tolist()
-    marked = [ markers['pannes'][index] for index in indexes ]
-    return marked
-'''
+
 #returns a df of all the affected points
 def get_affected_points(outage_df, points_df):
 
@@ -134,45 +143,74 @@ def get_affected_points(outage_df, points_df):
     mask = outage_df["polygon"].apply(lambda x: any(x.contains(i) for i in points_df['point']))
     marked = outage_df[mask]
 
+    #merge all the points rows and outages rows using cartesian product
     merged = marked.merge(points_df, how='cross')
 
-
+    #clean up the df and only leave rows where the given point is within a polygon. Otherwise the row is irrelevant 
     merged = merged.loc[lambda x:x['polygon'].contains( x['point'] ) ]
    
     return merged
 
 #takes a json str and returns a df of points
 def points_df_from_json(json_input):
-    point_df = pd.read_json(json_input)
+
+    #load the json string 
+    json_object = json.loads(json_input)
+
+    #if the input is not a list 
+    if not isinstance(json_object,list):
+
+        #assuming this is a single point, which would be of type dict, wrapper in a list, otherwise throw an error 
+        if isinstance(json_object, dict):
+            json_object = [json_object]
+        else: 
+            raise Exception('The points provided are incorectly formatted. Please make sure the input is a list of objects.')
+
+    #load the list into a dataframe 
+    point_df = pd.DataFrame(json_object)
 
     #find any missing coordinates, and use the adress feild to determine the long/lat
     point_df = process_addresses(point_df)
 
+    #convert the dataframe of points into a geodataframe 
     point_df = gpd.GeoDataFrame(point_df)
-    #point_df['coord']  = point_df[['Longitude','Latitude']].values.tolist()
+
+    #create a coordinates column 
     point_df['coord'] = point_df.apply( lambda x : [x['Longitude'], x['Latitude']], axis=1) 
+
+    #create a calculated Point column 
     point_df['point'] = point_df.apply( lambda x : Point(x['coord']), axis=1) 
 
-    #points_df['point'] = gpd.GeoSeries(points_df['point'])
+    #set the 'geometry' column in the df 
     point_df.set_geometry("point")
     point_df._geometry_column_name = "point"
 
     return point_df
 
 def geocode_rate_limited(address_str):
+
+    #initiate the geocoder 
     locator = Nominatim(user_agent="myGeocoder")
     geocode = RateLimiter(locator.geocode, min_delay_seconds=1)
+
+    #resolve the address 
     result = geocode(address_str)
 
+    #if address could not be resolved throw an exception  
     if(result is None):
         raise Exception('No results found for ' + address_str + '. Make sure the format is correct.')
-    point = result.point
+    
+    #get the x,y,z coordinates as a list 
+    point = list(result.point)
 
-    point = list(point)
+    #filter out the z axis 
     point_2d = point[0:2]
+
+    #reverse the order of the longitude and latitude 
     point_2d.reverse()
     return point_2d
 
+#if a point does not have the coordinates specified, the function tries to resolves the address to coordinates using geocoding 
 def process_addresses(points_df1):
     points_df1[['Longitude', 'Latitude']] = points_df1.apply(lambda x: pd.Series([x['Longitude'] , x['Latitude']])  if (x['Longitude'] and x['Latitude']  ) else pd.Series(geocode_rate_limited(x['address'])) , axis=1)
 
@@ -192,18 +230,24 @@ def get_polys_df(bis=None):
     #get the list of markers (unlike the kml file, markers give reasons for outages)
     markers = get_markers(bis)
 
-
     #convert markers to df
     markers_df = create_markers_df(markers=markers)
-    print(markers_df)
+
     #merge to one main
     main_df = polys.merge(markers_df, on='centroid', how='left')
     return main_df
 
+#a function for formatting the returned affected points 
 def process_view(affected_pts_df):
+
+    #filter out columns and leave only the ones we care about.
     df = affected_pts_df[['alais','address','start','end','num_affected','status','cause','municipality_code']]
-    print(affected_pts_df)
-    print(df.to_json(orient = "records",force_ascii=False))
+
+    #convert to json 
+    affected_points_json = df.to_json(orient = "records",force_ascii=False)
+
+    return affected_points_json
+
     
 def get_ouatges(points_str):
     #get the points dataframe
@@ -250,15 +294,15 @@ p_str = '''
 {
     "alais":"point 6",
     "address":"",
-    "Longitude": -73.9174319,
-    "Latitude":45.4982874
+    "Longitude": -73.67335690719707,
+    "Latitude": 45.510886201436016
 }
 ]
 '''
 
 
 
-print(get_ouatges(p_str))
+print(get_ouatges('{"alais":"point 6","address":"","Longitude": -73.67335690719707,"Latitude": 45.510886201436016}'))
 
 
 
