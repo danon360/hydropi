@@ -124,6 +124,7 @@ def resolve_outage_cause(code):
     if code in [31, 32, 33, 34, 41, 42, 43, 44, 54, 55, 56, 57]: cause = "Accident or incident"
     if code in [52, 53]: cause = "Damage caused by an animal"
     if code == 51: cause = "Damage due to vegetation"
+    if code == 9: cause = "System repair or improvement"
 
 
     return cause
@@ -338,7 +339,7 @@ def get_ouatges(points_str):
     #get a df of affected points
     affected_points_df = get_affected_points(outage_df, points_df)
 
-    #print(affected_points_df)
+    #format the df to a readable format
     affected_points_json = process_view(affected_points_df)
     return affected_points_json
 
@@ -347,13 +348,13 @@ def get_planned_interuptions(points_str):
     #get the points dataframe
     points_df = points_df_from_json(points_str)
 
-    #merge to one main
+    #get the planned interuptions df
     planned_outage_df =  get_aip_polys_df() 
     
     #get a df of affected points
     affected_points_df = get_affected_points(planned_outage_df, points_df)
-
-    #print(affected_points_df)
+    
+    #format the df to a readable format
     affected_points_json = process_view(affected_points_df)
     return affected_points_json
 p_str = '''
@@ -386,35 +387,15 @@ p_str = '''
 {
     "alais":"point 6",
     "address":"",
-    "Longitude": -73.67335690719707,
-    "Latitude": 45.510886201436016
+    "Longitude": -71.27148027405109,
+    "Latitude": 46.95219605930386
 }
 ]
 '''
 
 
-
-#print(get_ouatges('{"alais":"point 6","address":"","Longitude": -73.67335690719707,"Latitude": 45.510886201436016}'))
-aip = get_aip()
-bis = get_bis()
-get_planned_interuptions(p_str)
-#print(get_planned_interuptions_polys_kml(aip))
-#print( get_planned_interuption_markers(aip))
-#print(get_ouatges(p_str))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#run the code
+#print(get_planned_interuptions(p_str))
 
 
 
