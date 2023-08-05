@@ -233,7 +233,7 @@ def points_df_from_json(json_input):
 def geocode_rate_limited(address_str):
 
     #initiate the geocoder 
-    locator = Nominatim(user_agent="myGeocoder")
+    locator = Nominatim(user_agent="https")
     geocode = RateLimiter(locator.geocode, min_delay_seconds=1)
 
     #resolve the address 
@@ -356,46 +356,11 @@ def get_planned_interuptions(points_str):
     
     #format the df to a readable format
     affected_points_json = process_view(affected_points_df)
-    return affected_points_json
-p_str = '''
-[
-{
-    "alais":"point 1",
-    "address":"6845 27e Avenue, Montréal, QC ",
-    "Longitude": -74.46115135970805,
-    "Latitude": 45.9035602301897
-},
-{
-    "alais":"point 2",
-    "address":"2579 Rue Claudel, Montréal, QC ",
-    "Longitude": -73.6182939,
-    "Latitude": 45.7489449
-},
-{
-    "alais":"point 3",
-    "address":"2579 Rue Claudel, Montréal, QC ",
-    "Longitude": "",
-    "Latitude": 45.7489449
-},
-
-{
-    "alais":"point 5",
-    "address":"",
-    "Longitude": -73.9168822,
-    "Latitude":45.4977203
-},
-{
-    "alais":"point 6",
-    "address":"",
-    "Longitude": -71.27148027405109,
-    "Latitude": 46.95219605930386
-}
-]
-'''
+    return affected_points_json\
 
 
 #run the code
-#print(get_planned_interuptions(p_str))
+#print(get_planned_interuptions(""))
 
 
 
