@@ -56,7 +56,8 @@ def get_bis_polys_geo_df(BIS_VERSION):
     return geo_df
 
 def process_kmz_to_geo_df(kmz):
-        #unzip the kmz file into a kml file
+
+    #unzip the kmz file into a kml file
     kmz = ZipFile(BytesIO(kmz.content))
     kml = kmz.open(kmz.namelist()[0])
 
@@ -66,7 +67,7 @@ def process_kmz_to_geo_df(kmz):
 
     #parse the kml file using an xml parser
     dom = parse(kml)
-    
+
     #get all the polygons that form the outage map 
     placemarks = dom.getElementsByTagName("Placemark")
 
@@ -290,7 +291,7 @@ def get_aip_polys_df(aip=None):
 
     #get the df of all the outages
     polys = get_aip_polys_geo_df(aip)
-
+    
     #get the list of markers (unlike the kml file, markers give reasons for outages)
     markers = get_aip_markers(aip)
 

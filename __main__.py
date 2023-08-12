@@ -2,6 +2,7 @@
 import getopt, sys, os
 import hydroPI
 import json
+import triggers
 
 options = "hf:s:top"
  
@@ -31,7 +32,7 @@ def process_args():
     try:
         # Parsing argument
         arguments, values = getopt.getopt(argumentList, options, long_options)
-        print(argumentList)
+        
         # checking each argument
         for currentArgument, currentValue in arguments:
     
@@ -90,12 +91,30 @@ def get_pts():
 
 if __name__ == '__main__':
     
+    #variable initialization 
+    outages = None
+    planned_outages = None
+
+    #process arguments and set global variables accordingly
     process_args()
 
+    #get all the monitored pionts
     pts_str = get_pts()
-    
+    trigger_alert = True
+    get_planned_interuptions = True
+    #get the outages affecting the monitored points
     if get_outages:
-        hydroPI.get_ouatges(points_str=pts_str)
+       outages = hydroPI.get_ouatges(points_str=pts_str)
 
+    #get any planned outages that may affect the monitored points
     if get_planned_interuptions:
-        hydroPI.get_planned_interuptions(points_str=pts_str)
+        planned_outages = hydroPI.get_planned_interuptions(points_str=pts_str)
+
+    print(planned_outages)
+    #if outages list is not empty, and trigger alert option is set, trigger alert
+    if trigger_alert and outages and outages != "[]":
+        ''#triggers.trigger_alert_outage_print(json.loads(outages))
+    
+    #if planned outages list is not empty, and trigger alert option is set, trigger alert
+    if trigger_alert and planned_outages and planned_outages != "[]":
+        triggers.trigger_alert_planned_interuptions_print(json.loads(planned_outages))

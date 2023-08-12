@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="feat_1">
+        <Style id="stylesel_0">
+            <LineStyle id="substyle_1">
+                <color>cc301600</color>
+                <colorMode>normal</colorMode>
+                <width>1</width>
+            </LineStyle>
+            <PolyStyle id="substyle_0">
+                <color>4d371800</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Placemark id="feat_2">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.81860857724725,45.575087556889336</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_0">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_1">
+                        <coordinates>-73.8189861997,45.5736781078,0.0 -73.8181970127,45.5740594928,0.0 -73.8179452105,45.5741823103,0.0 -73.8167847067,45.5747705803,0.0 -73.8165415394,45.5749591613,0.0 -73.816810064,45.5751299347,0.0 -73.8184559962,45.5761252627,0.0 -73.8200292294,45.5762519643,0.0 -73.8202723903,45.5760633755,0.0 -73.8192547256,45.5738488752,0.0 -73.8189861997,45.5736781078,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_4">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.56035163893331,45.60874821101033</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_2">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_3">
+                        <coordinates>-73.5604315393,45.6073883707,0.0 -73.5601873332,45.607576386,0.0 -73.5596052469,45.6082351375,0.0 -73.5589363752,45.6096632658,0.0 -73.5592042574,45.6098346717,0.0 -73.5601318861,45.6102071742,0.0 -73.5603761043,45.6100191588,0.0 -73.5608771311,45.6094276413,0.0 -73.5613655165,45.6087768218,0.0 -73.5618001784,45.6079159629,0.0 -73.5615245517,45.6077128663,0.0 -73.5612566727,45.6075414662,0.0 -73.5604315393,45.6073883707,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_6">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.56035163893331,45.60874821101033</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_4">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_5">
+                        <coordinates>-73.5604315393,45.6073883707,0.0 -73.5601873332,45.607576386,0.0 -73.5596052469,45.6082351375,0.0 -73.5589363752,45.6096632658,0.0 -73.5592042574,45.6098346717,0.0 -73.5601318861,45.6102071742,0.0 -73.5603761043,45.6100191588,0.0 -73.5608771311,45.6094276413,0.0 -73.5613655165,45.6087768218,0.0 -73.5618001784,45.6079159629,0.0 -73.5615245517,45.6077128663,0.0 -73.5612566727,45.6075414662,0.0 -73.5604315393,45.6073883707,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_8">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.56088330597143,45.608779782289474</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_6">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_7">
+                        <coordinates>-73.5613844829,45.6079990143,0.0 -73.56047859,45.6085021783,0.0 -73.5602343791,45.6086901938,0.0 -73.5603650318,45.6094442554,0.0 -73.5606329174,45.6096156578,0.0 -73.5608771311,45.6094276413,0.0 -73.5613655165,45.6087768218,0.0 -73.5616523646,45.6081704141,0.0 -73.5613844829,45.6079990143,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_10">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.56035163893331,45.60874821101033</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_8">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_9">
+                        <coordinates>-73.5604315393,45.6073883707,0.0 -73.5601873332,45.607576386,0.0 -73.5596052469,45.6082351375,0.0 -73.5589363752,45.6096632658,0.0 -73.5592042574,45.6098346717,0.0 -73.5601318861,45.6102071742,0.0 -73.5603761043,45.6100191588,0.0 -73.5608771311,45.6094276413,0.0 -73.5613655165,45.6087768218,0.0 -73.5618001784,45.6079159629,0.0 -73.5615245517,45.6077128663,0.0 -73.5612566727,45.6075414662,0.0 -73.5604315393,45.6073883707,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_12">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-74.22911845808237,45.27290888058352</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_10">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_11">
+                        <coordinates>-74.2305359889,45.2722727891,0.0 -74.2298648182,45.2724508307,0.0 -74.2286603888,45.2727735245,0.0 -74.2282763909,45.2729447532,0.0 -74.2277293379,45.2732337247,0.0 -74.2274889448,45.2734231795,0.0 -74.2277572672,45.2735929149,0.0 -74.2305639362,45.2726319784,0.0 -74.2308043151,45.2724425169,0.0 -74.2305359889,45.2722727891,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_14">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-61.76096401651743,47.41627137433734</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_12">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_13">
+                        <coordinates>-61.7595575267,47.4133136013,0.0 -61.7570879352,47.413920203,0.0 -61.7567959831,47.4140799537,0.0 -61.7562016656,47.4161239713,0.0 -61.7562297671,47.4167981703,0.0 -61.7564651261,47.4169963441,0.0 -61.7645032401,47.4191438365,0.0 -61.7656558639,47.4192369991,0.0 -61.7659478177,47.4190772256,0.0 -61.765224922,47.4164756357,0.0 -61.7644072615,47.415525561,0.0 -61.764171879,47.4153274037,0.0 -61.7595575267,47.4133136013,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_16">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-68.67112963622408,48.96360603143633</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_14">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_15">
+                        <coordinates>-68.6420125445,48.9332234402,0.0 -68.6417346797,48.9334001708,0.0 -68.638550455,48.9367693267,0.0 -68.6361003181,48.9408940969,0.0 -68.6355915938,48.9423552748,0.0 -68.6384794381,49.00322323,0.0 -68.6387480385,49.003406302,0.0 -68.7156985713,48.9754987843,0.0 -68.7159764088,48.9753218816,0.0 -68.7131130278,48.9439120526,0.0 -68.7128444741,48.943729146,0.0 -68.6732018695,48.9338134939,0.0 -68.6420125445,48.9332234402,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_18">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-78.88995682327662,53.771165207094974</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_16">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_17">
+                        <coordinates>-78.8393063545,53.7200960419,0.0 -78.839041255,53.7202942136,0.0 -78.8620437927,53.7636090994,0.0 -78.8631695007,53.7654887081,0.0 -78.8640454635,53.7664538191,0.0 -78.8810608798,53.7817972377,0.0 -78.9002554886,53.7967176072,0.0 -78.9005903747,53.7968746625,0.0 -78.9289203439,53.8096128086,0.0 -78.9291855718,53.8094144896,0.0 -78.9300438737,53.8073658595,0.0 -78.934898575,53.7940082828,0.0 -78.9310677576,53.7897977048,0.0 -78.9019206764,53.7657250311,0.0 -78.8396404698,53.7202532784,0.0 -78.8393063545,53.7200960419,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_20">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-70.73646059263997,46.6224493864382</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_18">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_19">
+                        <coordinates>-70.7529852259,46.6016506516,0.0 -70.6619950996,46.6117717365,0.0 -70.6617361906,46.6119532468,0.0 -70.659087544,46.6245630294,0.0 -70.6593509923,46.624741456,0.0 -70.7952596596,46.6461820023,0.0 -70.7955182786,46.6460001817,0.0 -70.8017365025,46.6251887863,0.0 -70.8014725741,46.6250106953,0.0 -70.7529852259,46.6016506516,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_22">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.29851336054314,46.834984998289755</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_20">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_21">
+                        <coordinates>-71.30552372,46.8327500065,0.0 -71.2910133785,46.8355256082,0.0 -71.2907555415,46.8357085771,0.0 -71.2910221632,46.8358855181,0.0 -71.2932441798,46.836380666,0.0 -71.2951270535,46.8365868213,0.0 -71.3018754021,46.835687247,0.0 -71.3055326029,46.8331099152,0.0 -71.3057903762,46.8329269124,0.0 -71.30552372,46.8327500065,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_24">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-74.02652379962528,45.927588315126805</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_22">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_23">
+                        <coordinates>-74.027093914,45.9269270522,0.0 -74.0268637854,45.9270348341,0.0 -74.0263130034,45.9272970851,0.0 -74.0260689779,45.9274861627,0.0 -74.0258710826,45.9281575068,0.0 -74.0261420342,45.9283277974,0.0 -74.0263860632,45.9281387196,0.0 -74.0273648633,45.9270973397,0.0 -74.027093914,45.9269270522,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_26">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.73136565514041,45.55448597556148</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_24">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_25">
+                        <coordinates>-73.7325540631,45.5532723739,0.0 -73.7315200005,45.553409101,0.0 -73.7312766324,45.5535974907,0.0 -73.7301996037,45.5545419051,0.0 -73.7306455015,45.5558586936,0.0 -73.7309136603,45.5560296753,0.0 -73.7311570406,45.5558412861,0.0 -73.7328222152,45.5534433507,0.0 -73.7325540631,45.5532723739,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_28">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-66.7162502272153,48.030221963733055</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_26">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_27">
+                        <coordinates>-66.7162794336,48.0292012408,0.0 -66.7148389558,48.0294071311,0.0 -66.7145594457,48.0295792793,0.0 -66.7171623561,48.0315073503,0.0 -66.7174190212,48.0316948297,0.0 -66.7176985331,48.0315226745,0.0 -66.716536084,48.0293887222,0.0 -66.7162794336,48.0292012408,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_30">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-74.46231409316788,45.89910855964888</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_28">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_29">
+                        <coordinates>-74.4662699609,45.8810166517,0.0 -74.4660276943,45.8812066941,0.0 -74.4564143849,45.8903300856,0.0 -74.4518357318,45.8979124686,0.0 -74.4521673768,45.8992939229,0.0 -74.4669093464,45.917317407,0.0 -74.4671816349,45.9174866122,0.0 -74.4674240608,45.9172965641,0.0 -74.4694529741,45.912716967,0.0 -74.4665420638,45.8811858557,0.0 -74.4662699609,45.8810166517,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_32">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-70.7863751988185,46.69159729778292</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_30">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_31">
+                        <coordinates>-70.9100816226,46.6371044158,0.0 -70.7991759391,46.6488954812,0.0 -70.792857061,46.6508949612,0.0 -70.7358873056,46.6741435778,0.0 -70.7064203776,46.6869169093,0.0 -70.7061612539,46.6870985256,0.0 -70.7044780422,46.6897961905,0.0 -70.6724753058,46.7416451434,0.0 -70.6740906694,46.7449878869,0.0 -70.674354767,46.7451662829,0.0 -70.69111611,46.7530703253,0.0 -70.7457392307,46.7406006725,0.0 -70.8318749936,46.7085338435,0.0 -70.8884112135,46.6751456182,0.0 -70.8912101979,46.673257918,0.0 -70.8914686198,46.6730758747,0.0 -70.9005276305,46.6666831472,0.0 -70.9008806868,46.6658459445,0.0 -70.9103459752,46.637282251,0.0 -70.9100816226,46.6371044158,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_34">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.74290865207526,46.67446303172782</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_32">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_33">
+                        <coordinates>-71.7420582243,46.6736684955,0.0 -71.7418027335,46.6738524906,0.0 -71.7423479777,46.6742534365,0.0 -71.7429035235,46.6746616004,0.0 -71.743506691,46.6750864731,0.0 -71.7437740108,46.6752623308,0.0 -71.7440295016,46.6750783311,0.0 -71.7423255321,46.6738443566,0.0 -71.7420582243,46.6736684955,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_36">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-76.34453882740581,45.57076799096275</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_34">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_35">
+                        <coordinates>-76.3352958125,45.4702622226,0.0 -76.3208088278,45.4704395171,0.0 -76.2668470872,45.4792796953,0.0 -76.0799730336,45.5276620784,0.0 -76.0797380584,45.5278555862,0.0 -76.0767736276,45.5600876204,0.0 -76.0770490902,45.5602527903,0.0 -76.0982438926,45.5720168862,0.0 -76.3544247199,45.6631408759,0.0 -76.6001169084,45.6409587523,0.0 -76.6131713653,45.6377309994,0.0 -76.6134049033,45.6375363416,0.0 -76.6135562237,45.6364432264,0.0 -76.5731632195,45.578943062,0.0 -76.5728861537,45.5787791392,0.0 -76.4677333941,45.5222817262,0.0 -76.4539395084,45.5162784666,0.0 -76.3352958125,45.4702622226,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_38">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-76.53499210554482,45.786080977602126</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_36">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_37">
+                        <coordinates>-76.4876633475,45.5323545476,0.0 -76.4874298115,45.5325489268,0.0 -76.4652297734,45.5538081455,0.0 -76.3391988618,45.6757192623,0.0 -76.267616771,45.7985041809,0.0 -76.2986422411,45.9066168981,0.0 -76.3489921109,45.9546705495,0.0 -76.3492704301,45.9548350672,0.0 -76.5381852956,46.0159869056,0.0 -76.5733584829,46.0207464193,0.0 -76.8027513624,45.8902432419,0.0 -76.8029853096,45.8900481575,0.0 -76.7697125813,45.7508905311,0.0 -76.6642645313,45.5739186902,0.0 -76.6639872155,45.5737549979,0.0 -76.6612797421,45.5722434439,0.0 -76.5625403013,45.5369346961,0.0 -76.5591284288,45.5357918659,0.0 -76.4876633475,45.5323545476,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_40">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.28763206508233,46.809209777285616</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_38">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_39">
+                        <coordinates>-71.287671799,46.8081864226,0.0 -71.2874140835,46.808369383,0.0 -71.2864105012,46.8100138521,0.0 -71.286676979,46.8101908026,0.0 -71.2884540723,46.8095354455,0.0 -71.2887117898,46.8093524827,0.0 -71.2884448728,46.8085497475,0.0 -71.2881783974,46.8083728012,0.0 -71.287671799,46.8081864226,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_42">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.22802250714415,46.808051927649295</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_40">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_41">
+                        <coordinates>-71.228267885,46.8071809927,0.0 -71.2280343347,46.8073360457,0.0 -71.2277457901,46.8075276101,0.0 -71.2274845114,46.8077017934,0.0 -71.2272421383,46.8078688663,0.0 -71.2269842156,46.8080516879,0.0 -71.2272464511,46.8084708633,0.0 -71.2275127232,46.8086479542,0.0 -71.2283941911,46.8087655287,0.0 -71.2286521125,46.8085827039,0.0 -71.2288436852,46.8077272796,0.0 -71.228534154,46.8073580811,0.0 -71.228267885,46.8071809927,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_44">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-72.37879224080044,46.2691316117917</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_42">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_43">
+                        <coordinates>-72.3777543369,46.261483075,0.0 -72.3775030117,46.2616684922,0.0 -72.376853943,46.2719230502,0.0 -72.3772325583,46.274045168,0.0 -72.3774999483,46.274219487,0.0 -72.3816863156,46.272649277,0.0 -72.3819376778,46.2724638496,0.0 -72.3780216657,46.2616573921,0.0 -72.3777543369,46.261483075,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_46">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.986651886351,45.36588934179455</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_44">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_45">
+                        <coordinates>-73.9876431595,45.3645053308,0.0 -73.9856057061,45.3653584394,0.0 -73.9853640623,45.3655473711,0.0 -73.9850803036,45.3662952722,0.0 -73.9854866379,45.3672198401,0.0 -73.9857546662,45.3673901794,0.0 -73.9866201459,45.367067948,0.0 -73.9868617921,45.3668790134,0.0 -73.9886030256,45.3651701899,0.0 -73.9879111812,45.3646756645,0.0 -73.9876431595,45.3645053308,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_48">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.30733925142866,45.439971065315156</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_46">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_47">
+                        <coordinates>-73.3071917193,45.436114424,0.0 -73.3059239891,45.436247799,0.0 -73.3056796728,45.4364352293,0.0 -73.3053593729,45.4373983282,0.0 -73.3049122579,45.438772465,0.0 -73.3034133311,45.4434412398,0.0 -73.3036795841,45.443613252,0.0 -73.3048061894,45.4434217734,0.0 -73.3103470766,45.4416893718,0.0 -73.3105914005,45.4415019305,0.0 -73.311682694,45.4398417705,0.0 -73.3114404574,45.439175021,0.0 -73.3074579483,45.4362864262,0.0 -73.3071917193,45.436114424,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_50">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-72.52416164147232,45.34942671065453</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_48">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_49">
+                        <coordinates>-72.5250847684,45.3486166519,0.0 -72.522670886,45.3490516182,0.0 -72.5224242734,45.3492372813,0.0 -72.5226128628,45.3499381515,0.0 -72.5228761733,45.3501120436,0.0 -72.5257254945,45.3498961582,0.0 -72.5259720988,45.3497104876,0.0 -72.5253480804,45.3487905379,0.0 -72.5250847684,45.3486166519,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_52">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-74.19706725857841,45.260685056842235</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_50">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_51">
+                        <coordinates>-74.1984084285,45.2594664432,0.0 -74.197083778,45.2595202592,0.0 -74.1968433388,45.2597096449,0.0 -74.1958164335,45.2607278257,0.0 -74.1955995056,45.2612859054,0.0 -74.1960151872,45.2618423757,0.0 -74.196300044,45.2620521285,0.0 -74.1965682131,45.2622219393,0.0 -74.1968086644,45.2620325538,0.0 -74.1982295912,45.2606346887,0.0 -74.1984429761,45.2601713442,0.0 -74.1986765914,45.2596362485,0.0 -74.1984084285,45.2594664432,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_54">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.63250921158038,45.43544507456436</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_52">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_53">
+                        <coordinates>-73.6310265627,45.4346169002,0.0 -73.6307833786,45.4348050541,0.0 -73.6310506245,45.4349762679,0.0 -73.6317124641,45.4352709584,0.0 -73.6323124448,45.4355371298,0.0 -73.6339743621,45.4362598929,0.0 -73.6342175416,45.4360717318,0.0 -73.6339502804,45.4359005256,0.0 -73.6334889481,45.4356963801,0.0 -73.6310265627,45.4346169002,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_56">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.81945064637135,45.63761262018262</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_54">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_55">
+                        <coordinates>-73.8199576059,45.6358976364,0.0 -73.8182036457,45.6364623395,0.0 -73.8142262045,45.6393834291,0.0 -73.8139827377,45.6395720109,0.0 -73.814251575,45.6397427966,0.0 -73.8151328719,45.6395985914,0.0 -73.8245219262,45.6374293904,0.0 -73.8247653466,45.6372407854,0.0 -73.8244964885,45.6370700256,0.0 -73.8221800805,45.6360993095,0.0 -73.8199576059,45.6358976364,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_58">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.7603263484042,45.53187965835105</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_56">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_57">
+                        <coordinates>-73.7609947997,45.5295222809,0.0 -73.7607516414,45.5297107335,0.0 -73.7584528938,45.5317865206,0.0 -73.758285129,45.5332247051,0.0 -73.7582672607,45.5339128246,0.0 -73.7585353981,45.5340837367,0.0 -73.7595707628,45.5338435761,0.0 -73.7606637721,45.5334312254,0.0 -73.7609069475,45.5332427727,0.0 -73.7622407364,45.5318247406,0.0 -73.7627178052,45.5307812062,0.0 -73.7612629239,45.5296931859,0.0 -73.7609947997,45.5295222809,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_60">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.30614456790056,46.111474771698155</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_58">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_59">
+                        <coordinates>-71.3082841147,46.1106090619,0.0 -71.3041944244,46.1112837752,0.0 -71.303940115,46.1114667366,0.0 -71.3046610586,46.1120428983,0.0 -71.3049241276,46.1122197699,0.0 -71.3063297445,46.1122849068,0.0 -71.3082928965,46.1109688961,0.0 -71.3085471887,46.1107859248,0.0 -71.3082841147,46.1106090619,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_62">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-72.88536044723745,45.62310398394836</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_60">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_61">
+                        <coordinates>-72.8895063189,45.617873351,0.0 -72.8892597427,45.6180598684,0.0 -72.88198377,45.6238943624,0.0 -72.8837324639,45.6275852245,0.0 -72.8839982846,45.6277582724,0.0 -72.8842449232,45.6275717659,0.0 -72.8897721103,45.6180463841,0.0 -72.8895063189,45.617873351,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_64">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-67.4295800923143,52.33215534059586</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_62">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_63">
+                        <coordinates>-67.4314837444,52.3309170872,0.0 -67.4276957624,52.3330350328,0.0 -67.42739344,52.3332082712,0.0 -67.4276762296,52.3333934761,0.0 -67.4314642412,52.3312755322,0.0 -67.4317665363,52.3311022835,0.0 -67.4314837444,52.3309170872,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_66">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.35373422370225,46.10142613772945</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_64">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_65">
+                        <coordinates>-73.3516195387,46.0985765852,0.0 -73.3509878323,46.0986403261,0.0 -73.3507406552,46.0988279181,0.0 -73.3508665932,46.0990253107,0.0 -73.3516409713,46.1001878979,0.0 -73.3565277032,46.1048477909,0.0 -73.3567974115,46.1050197296,0.0 -73.357044596,46.1048321237,0.0 -73.35485732,46.1016133043,0.0 -73.3518891997,46.0987485355,0.0 -73.3516195387,46.0985765852,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_68">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.79664227560352,45.51698636646955</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_66">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_67">
+                        <coordinates>-73.7965704248,45.5156111819,0.0 -73.7949246476,45.5158330577,0.0 -73.7946816687,45.516021584,0.0 -73.7962758593,45.5179736295,0.0 -73.7965440376,45.5181444471,0.0 -73.7980095045,45.5184268416,0.0 -73.7982524826,45.5182383077,0.0 -73.7984879949,45.5179046647,0.0 -73.7968385923,45.5157819986,0.0 -73.7965704248,45.5156111819,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_70">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-67.34719286148976,48.61174709134424</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_68">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_69">
+                        <coordinates>-67.2686288168,48.547319451,0.0 -67.2655858981,48.5477118749,0.0 -67.265305417,48.5478853351,0.0 -67.2702545236,48.6493823739,0.0 -67.2761590845,48.6779647725,0.0 -67.2764210454,48.6781509649,0.0 -67.4474996117,48.636998553,0.0 -67.4477799627,48.6368246587,0.0 -67.4741493564,48.6133886593,0.0 -67.473887008,48.6132029081,0.0 -67.4578333187,48.6031794202,0.0 -67.436456646,48.590515477,0.0 -67.3628649653,48.563677301,0.0 -67.2686288168,48.547319451,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_72">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.52343245044442,45.56097109051846</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_70">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_71">
+                        <coordinates>-71.5248452986,45.5598629573,0.0 -71.5213803291,45.5614401604,0.0 -71.5211293365,45.5616235718,0.0 -71.5213904376,45.5617998831,0.0 -71.5243774476,45.5613548917,0.0 -71.524628428,45.5611714729,0.0 -71.5251064033,45.5600392596,0.0 -71.5248452986,45.5598629573,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_74">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.69745073126418,45.082891756265234</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_72">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_73">
+                        <coordinates>-71.6985942087,45.0717582208,0.0 -71.6983460614,45.071941981,0.0 -71.6889316861,45.090870838,0.0 -71.6891910776,45.0910466982,0.0 -71.7025127248,45.0883819127,0.0 -71.7027609328,45.0881981409,0.0 -71.7026584504,45.0766925362,0.0 -71.6988535404,45.0719340557,0.0 -71.6985942087,45.0717582208,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_76">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.46026953409782,45.483605005960754</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_74">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_75">
+                        <coordinates>-73.4620812635,45.4821180247,0.0 -73.4583732917,45.4836680335,0.0 -73.4581292891,45.4838558088,0.0 -73.4580537342,45.4844013299,0.0 -73.4583206784,45.4845729699,0.0 -73.4597438171,45.4848770382,0.0 -73.4601186781,45.484809472,0.0 -73.460362678,45.4846216921,0.0 -73.4627231139,45.4825790122,0.0 -73.4623482092,45.4822896546,0.0 -73.4620812635,45.4821180247,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_78">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.16971777090033,46.897913641677725</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_76">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_77">
+                        <coordinates>-71.1653613603,46.8944525299,0.0 -71.165102801,46.894635212,0.0 -71.1694662857,46.9000827709,0.0 -71.1697328257,46.9002600016,0.0 -71.1707661502,46.9002667895,0.0 -71.1722826908,46.9000256445,0.0 -71.1734008302,46.8995225384,0.0 -71.1736593848,46.8993398371,0.0 -71.1736595321,46.8985733558,0.0 -71.1733929873,46.8983961345,0.0 -71.1653613603,46.8944525299,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_80">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-71.16920469076312,46.89673353424809</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_78">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_79">
+                        <coordinates>-71.1652651111,46.8936418059,0.0 -71.1650065553,46.8938244877,0.0 -71.1701127741,46.8984847393,0.0 -71.1703793082,46.8986619683,0.0 -71.1715034668,46.8991698229,0.0 -71.1723485598,46.8990353195,0.0 -71.1726071156,46.8988526206,0.0 -71.1722853578,46.8984338865,0.0 -71.1710407838,46.8970727394,0.0 -71.1707742555,46.8968955119,0.0 -71.1663440042,46.8941540041,0.0 -71.1656945909,46.8937541848,0.0 -71.1652651111,46.8936418059,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_82">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-77.10295143967552,45.91934212751932</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_80">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_81">
+                        <coordinates>-77.1034096157,45.9180205092,0.0 -77.1001674864,45.9180565486,0.0 -77.0999344968,45.9182522639,0.0 -77.104841801,45.9214796309,0.0 -77.1051222464,45.9216422348,0.0 -77.1053552319,45.9214465082,0.0 -77.1036900388,45.9181831164,0.0 -77.1034096157,45.9180205092,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_84">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-73.6863070879321,45.48740963813185</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_82">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_83">
+                        <coordinates>-73.6872141989,45.4853782161,0.0 -73.6866555289,45.4854244821,0.0 -73.6851573142,45.4863112272,0.0 -73.6849140862,45.4864995069,0.0 -73.6853276778,45.4895467753,0.0 -73.6855953657,45.4897178613,0.0 -73.6863861617,45.4893251827,0.0 -73.6866293973,45.4891368994,0.0 -73.6870392421,45.4887862964,0.0 -73.6877411574,45.4871732149,0.0 -73.6874818722,45.4855492971,0.0 -73.6872141989,45.4853782161,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_86">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-78.7709627813569,53.01039645751935</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_84">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_85">
+                        <coordinates>-78.7953873022,53.0052308127,0.0 -78.7352909241,53.016732611,0.0 -78.7350293947,53.0169308346,0.0 -78.7353580991,53.0170885492,0.0 -78.7927606378,53.0071224769,0.0 -78.795734795,53.0058171493,0.0 -78.7959960031,53.0056187977,0.0 -78.7957161285,53.0053883753,0.0 -78.7953873022,53.0052308127,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_88">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-69.25056624160342,47.46620284884173</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_86">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_87">
+                        <coordinates>-69.2481848828,47.4642099656,0.0 -69.2479168863,47.4643881911,0.0 -69.2523180588,47.467948216,0.0 -69.2525809111,47.4681299428,0.0 -69.2528489109,47.4679517064,0.0 -69.2518824227,47.4668135208,0.0 -69.2510166354,47.4661112802,0.0 -69.2507537986,47.4659295497,0.0 -69.2481848828,47.4642099656,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="feat_90">
+            <name/>
+            <styleUrl>#stylesel_0</styleUrl>
+            <ExtendedData>
+                <Data name="centroid">
+                    <value>-72.67814800330885,46.636861772269974</value>
+                </Data>
+            </ExtendedData>
+            <Polygon id="geom_88">
+                <outerBoundaryIs>
+                    <LinearRing id="geom_89">
+                        <coordinates>-72.6812142873,46.6351093619,0.0 -72.6750602255,46.6382523608,0.0 -72.6748081571,46.6384384695,0.0 -72.6750783575,46.6386120898,0.0 -72.6812324599,46.6354690896,0.0 -72.6814844917,46.6352829666,0.0 -72.6812142873,46.6351093619,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+    </Document>
+</kml>
